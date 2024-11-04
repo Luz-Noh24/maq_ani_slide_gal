@@ -1,0 +1,359 @@
+/* Reseteo básico para márgenes y relleno */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif; /* Fuente predeterminada */
+}
+
+/* Estilos generales del cuerpo */
+body {
+    color: #333; /* Color de texto */
+    background-color: white; /* Color de fondo */
+}
+
+/* Clase para contenedor de ancho máximo */
+.ancho {
+    max-width: 1200px;
+    margin: auto; /* Centra el contenedor */
+}
+
+/* Estilos generales del header */
+header {
+    background-color: white; /* Color de fondo del header */
+    display: flex; /* Pone el logo y el menú en línea horizontal */
+    justify-content: space-between; /* Logo a la izquierda y menú a la derecha */
+    align-items: center; /* Centra verticalmente el contenido */
+    padding: 20px; /* Espacio interno alrededor del contenido */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra ligera para dar profundidad */
+}
+
+/* Estilos para el logo */
+.logo {
+    display: flex; /* Flexbox para disposición del logo */
+    align-items: center; /* Centrar verticalmente el logo y el icono */
+}
+
+.logo img {
+    height: 50px; /* Ajusta la altura del logo */
+    margin-right: 10px; /* Espaciado entre logo y icono */
+}
+
+/* Estilos para el icono del menú */
+#icono {
+    display: none; /* Oculta el icono, se mostrará en dispositivos móviles */
+    justify-content: center; /* Centra el contenido dentro del icono */
+    align-items: center; /* Centra verticalmente el contenido */
+    background-color: #ff4048; /* Color de fondo del icono */
+    color: white; /* Color del texto/icono */
+    padding: 10px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+}
+
+/* Estilos para el contenedor del menú */
+#caja {
+    display: block; /* Muestra el menú */
+}
+
+nav ul {
+    display: flex; /* Coloca los elementos del menú en fila horizontal */
+    list-style: none; /* Elimina los puntos de la lista */
+}
+
+nav ul li {
+    margin-left: 20px; /* Espacio entre los elementos del menú */
+}
+
+nav ul li a {
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: #000; /* Color negro para los enlaces */
+    font-weight: 500; /* Grosor de la fuente medio */
+    padding: 10px 20px; /* Añade espaciado interno a los enlaces */
+    transition: background-color 0.3s ease; /* Efecto de transición suave para el cambio de fondo */
+}
+
+/* Estilos al pasar el cursor sobre los enlaces del menú */
+nav ul li a:hover {
+    color: #ff4048; /* Cambia el color al pasar el cursor */
+    border-bottom: 2px solid #ff4048; /* Agrega un borde inferior */
+}
+
+/* PARTE DEL SLIDER DE FOTOS */
+/* Estilos del slider de fotos */
+.slide {
+    position: relative;
+    background-color: #f8f8f8;
+    height: 500px;
+    overflow: hidden;
+}
+
+/* Contenedor del texto */
+.sd-cont {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centra el contenido en la imagen */
+    background-color: rgba(245, 245, 245, 0.8); /* Fondo semitransparente */
+    padding: 20px;
+    max-width: 60%;
+    text-align: center;
+    color: #333;
+    z-index: 2;
+    border-radius: 8px;
+}
+
+/* Estilos del título */
+.slide h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ff4048;
+    margin-bottom: 10px;
+}
+
+/* Estilos del párrafo */
+.slide p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+/* Botón */
+.btn {
+    background-color: #ff4048;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.rslides {
+    position: relative;
+    list-style: none;
+    overflow: hidden;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+  
+.rslides li {
+    backface-visibility: hidden;
+    position: absolute;
+    display: none;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+
+.rslides li:first-child {
+    position: relative;
+    display: block;
+    float: left;
+}
+  
+.rslides img {
+    display: block;
+    height: auto;
+    float: left;
+    width: 100%;
+    border: 0;
+}
+
+/* Animaciones con los servicios */
+/* Estilos de la sección de servicios */
+#service {
+    padding: 60px 20px; /* Espaciado general de la sección */
+    text-align: center;
+    background-color: #f8f8f8;
+}
+
+#service h2 {
+    font-size: 2.5rem;
+    color: #ff4048;
+    font-weight: bold;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+/* Contenedor de los servicios */
+.serv-cont {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px; /* Espaciado entre los servicios */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Estilos para cada artículo de servicio */
+.serv-cont article {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+/* Estilos para los íconos */
+.serv-cont article i {
+    font-size: 3rem;
+    color: #ff4048;
+    margin-bottom: 15px;
+}
+
+/* Títulos de los servicios */
+.serv-cont article h3 {
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Descripción de los servicios */
+.serv-cont article p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+.contenedor {
+    background-color: f5f5f5;
+    display: flex;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+    gap: 20px;
+}
+
+.contenedor_fotos a {
+    filter: brightness(1);
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.contenedor_fotos a:hover {
+    filter: brightness(0.5);
+}
+.contenedor_fotos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Crea 2 columnas de igual ancho */
+    grid-template-rows: repeat(2, 1fr); /* Crea 2 filas de igual alto */
+    gap: 30px; /* Espacio entre las fotos */
+    padding: 10px;
+}
+
+.contenedor_fotos figure {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+}
+.contenedor_fotos figure img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Estilos para la sección de información */
+.info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+
+.info h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.info h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.info h3 span {
+    color: #ff4048;
+}
+
+.info p {
+    margin: 20px 0;
+    line-height: 1.5;
+    color: #666;
+}
+
+.join-btn {
+    background-color: #ff4048;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+}
+/* Estilos para el footer */
+.footer {
+    background-color: #f5f5f5; /* Color de fondo */
+    padding: 20px 0; /* Espaciado superior e inferior */
+    text-align: center; /* Centra el texto */
+    border-top: 1px solid #ddd; /* Línea superior para separación */
+}
+
+.footer-content {
+    display: flex; /* Flexbox para alinear el contenido */
+    flex-direction: column; /* Apila los elementos verticalmente */
+    align-items: center; /* Centra horizontalmente */
+}
+
+.footer p {
+    margin: 10px 0; /* Espacio alrededor del párrafo */
+    color: #666; /* Color del texto */
+}
+
+.footer a {
+    color: #ff4048; /* Color del enlace */
+    text-decoration: none; /* Elimina el subrayado */
+}
+
+.footer a:hover {
+    text-decoration: underline; /* Subraya al pasar el mouse */
+}
+
+.social-icons {
+    margin-top: 10px; /* Espacio arriba de los iconos sociales */
+}
+
+.social-icons a {
+    margin: 0 10px; /* Espaciado entre iconos */
+    color: #333; /* Color de los iconos */
+    font-size: 1.5rem; /* Tamaño de los iconos */
+    transition: color 0.3s ease; /* Transición suave para el color */
+}
+
+.social-icons a:hover {
+    color: #ff4048; /* Cambia el color al pasar el cursor */
+}
+
+/* Botón "Volver arriba" */
+.back-to-top {
+    background-color: #ff4048; /* Color del botón */
+    color: #fff; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px 15px; /* Espaciado interno */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    font-size: 1rem; /* Tamaño de fuente */
+    margin-bottom: 10px; /* Espacio en la parte inferior */
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+.back-to-top:hover {
+    background-color: #ff4048; /* Color más oscuro al pasar el cursor */
+}
+
+

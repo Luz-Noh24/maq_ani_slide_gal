@@ -1,0 +1,108 @@
+/* Estilos para pantallas pequeñas */
+@media (max-width: 480px) {
+    header {
+        flex-direction: column; /* Cambia a disposición vertical */
+        align-items: flex-start; /* Alinea los elementos al inicio */
+    }
+
+    #icono {
+        display: flex; /* Muestra el icono en pantallas pequeñas */
+    }
+
+    nav ul {
+        flex-direction: column; /* Cambia el menú a una columna */
+        width: 100%; /* Asegura que el menú use todo el ancho */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Espaciado entre elementos en vertical */
+        text-align: center; /* Centra el texto en los elementos del menú */
+    }
+    .slide {
+        height: 300px; /* Reduce la altura del slider */
+    }
+    
+    .sd-cont {
+        max-width: 90%; /* Aumenta el ancho para dispositivos pequeños */
+        padding: 10px;
+    }
+    
+    .slide h1 {
+        font-size: 1.8rem; /* Reduce el tamaño del título */
+    }
+    
+    .slide p {
+        font-size: 0.9rem; /* Reduce el tamaño del párrafo */
+    }
+    
+    .btn {
+        padding: 8px 15px; /* Reduce el padding del botón */
+        font-size: 0.9rem; /* Reduce el tamaño de la fuente del botón */
+    }
+    #service h2 {
+        font-size: 2rem;
+    }
+    
+    .serv-cont article {
+        padding: 15px;
+    }
+
+    .serv-cont article h3 {
+        font-size: 1.2rem;
+    }
+    
+    .serv-cont article p {
+        font-size: 0.9rem;
+    }
+
+    .serv-cont article i {
+        font-size: 2.5rem;
+    }
+    .contenedor_fotos {
+        grid-template-columns: 1fr; /* 1 columna */
+        grid-template-rows: auto; /* Altura automática para todas las filas */
+        gap: 15px; /* Espacio reducido entre las fotos */
+    }
+
+    .contenedor {
+        flex-direction: column; /* Apila los elementos en lugar de alinearlos en fila */
+        padding: 10px; /* Reduce el padding */
+    }
+
+    .contenedor_fotos figure {
+        width: 100%; /* Ajusta el ancho para ocupar toda la columna */
+        height: auto; /* Ajusta la altura para que sea proporcional */
+    }
+
+    .info h2, .info h3 {
+        font-size: 20px; /* Tamaño de fuente más pequeño para móviles */
+    }
+
+    .info p {
+        font-size: 16px; /* Tamaño de fuente reducido */
+    }
+    .footer {
+        padding: 15px 10px; /* Espaciado reducido */
+    }
+
+    .footer p {
+        font-size: 0.9rem; /* Tamaño de fuente reducido */
+        margin: 5px 0; /* Espacio reducido */
+    }
+
+    .social-icons {
+        margin-top: 5px; /* Espacio reducido */
+    }
+
+    .social-icons a {
+        font-size: 1.2rem; /* Tamaño de los iconos reducido */
+        margin: 0 5px; /* Espaciado entre iconos reducido */
+    }
+
+    .back-to-top {
+        padding: 8px 12px; /* Espaciado interno reducido */
+        font-size: 0.9rem; /* Tamaño de fuente reducido */
+    }
+}
+
+/* Est
